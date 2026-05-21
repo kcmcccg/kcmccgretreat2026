@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026组长退休营 - 主页</title>
+    <style>
+        :root {
+            --primary-purple: #4a2a6b;
+            --accent-gold: #c5a059;
+            --bg-light: #fdfbf7;
+        }
+        body {
+            font-family: "PingFang SC", sans-serif;
+            margin: 0;
+            background-color: var(--primary-purple); /* 主页采用海报深紫色背景 */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            color: var(--primary-purple);
+            width: 100%;
+            border-bottom: 8px solid var(--accent-gold);
+            box-sizing: border-box;
+        }
+        .church-name { font-size: 0.8rem; letter-spacing: 1px; }
+        .main-title { font-size: 2.2rem; font-weight: 900; margin: 10px 0; }
+        .slogan { font-size: 0.9rem; border: 1px solid var(--primary-purple); padding: 5px 10px; display: inline-block; }
+        
+        .nav-container {
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        .nav-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--accent-gold);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .nav-card:active { background: rgba(255,255,255,0.2); }
+        .circle-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .nav-text h3 { margin: 0; font-size: 1.1rem; }
+        .nav-text p { margin: 5px 0 0; font-size: 0.8rem; opacity: 0.8; }
+        
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-section">
+        <div class="church-name">吧生基督教华人卫理公会</div>
+        <div class="main-title">2026 组长退休营</div>
+        <div class="slogan">同心同行，建造生命，完成使命，延续传承！</div>
+    </header>
+
+    <div class="nav-container">
+        <a href="devotion1.html" class="nav-card">
+            <div class="circle-icon">生命</div>
+            <div class="nav-text">
+                <h3>灵修材料 (一)</h3>
+                <p>“向下移动” - 分享的生命</p>
+            </div>
+        </a>
+
+        <a href="devotion2.html" class="nav-card">
+            <div class="circle-icon">传承</div>
+            <div class="nav-text">
+                <h3>灵修材料 (二)</h3>
+                <p>传承与差遣的“向下移动”</p>
+            </div>
+        </a>
+
+        <div style="text-align: center; color: var(--accent-gold); margin-top: 20px;">
+            <p>📍 吉隆坡卫理大厦<br>📅 31/5 - 2/6/2026</p>
+        </div>
+    </div>
+
+    <footer>© 2026 KLANG CHINESE METHODIST CHURCH</footer>
+</body>
+</html>
