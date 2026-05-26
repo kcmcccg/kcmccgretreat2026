@@ -116,6 +116,26 @@
         </footer>
         
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const storageKeyPrefix = "devotion2_ans_";
+            const answerInputs = document.querySelectorAll('.ans-line');
+
+            // 1. 页面加载：读取本地缓存并智能填回输入框
+            answerInputs.forEach((input, index) => {
+                const savedData = localStorage.getItem(storageKeyPrefix + index);
+                if (savedData !== null) {
+                    input.value = savedData;
+                }
+
+                // 2. 输入监听：当组长在手机键盘打字时，实时异步存盘
+                input.addEventListener('input', (e) => {
+                    localStorage.setItem(storageKeyPrefix + index, e.target.value);
+                });
+            });
+        });
+    </script>
     
 </body>
 </html>
