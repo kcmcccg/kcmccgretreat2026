@@ -30,8 +30,9 @@
             background: transparent;
             font-size: 1rem;
             font-family: inherit;
+	    box-sizing: border-box;
             
-            /* 【核心修改】当用户输入时，文字会自动显示为以下颜色 */
+            /* 当用户输入时，文字会自动显示为深金色 */
             color: #a17828; 
             font-weight: 500;
         }
@@ -39,6 +40,22 @@
         .ans-line:focus {
             outline: none;
             border-bottom: 2px solid var(--primary);
+        }
+
+        /* 页脚区域：加入上边框分割线并强制居中 */
+        footer {
+            text-align: center;
+            padding: 20px 0 10px 0;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #e0e0e0; /* 精致淡雅的分割线 */
+            margin-top: 50px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        footer p {
+            margin: 0;
+            text-align: center; /* 确保文字完美居中 */
         }
     </style>
 </head>
@@ -76,20 +93,43 @@
 
         <div class="reflection">
             <h4>安静默想与反思</h4>
-            <span class="q">① 在长期服侍中, 我是否慢慢把“角色”活成了“身份”? 若离开岗位, 我还知道自己是谁吗?</span>
+            <span class="q">1. 在长期服侍中, 我是否慢慢把“角色”活成了“身份”? </span>
+	    <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">若离开岗位, 我还知道自己是谁吗?若离开岗位或我无法再服侍，我还知道自己是谁吗？请用一到两句话来回答“我是谁？”</p>
             <input type="text" class="ans-line" placeholder="答：">
             
-            <span class="q">② 我最近最真实的状态是什么?</span>
-            <p style="font-size: 0.8rem; color: #666;">(疲惫? 麻木? 委屈? 比较? 孤单? 平静? 喜乐? 焦虑? 压力?)</p>
+            <span class="q">2. 我最近最真实的状态是什么?</span>
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">(疲惫? 麻木? 委屈? 比较? 孤单? 平静? 喜乐? 焦虑? 压力?)</p>
             <input type="text" class="ans-line" placeholder="答：">
-            
-            <span class="q">③ 上帝曾经托付我的起初呼召是什么? 今天是否偏离了单纯?</span>
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我里面最常出现的声音是什么？</p>
+            <input type="text" class="ans-line" placeholder="答：">            
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我是否长期活在自责与不够好？</p>
+            <input type="text" class="ans-line" placeholder="答：">   
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我更容易记得人的批评，还是神的应许？</p>
+            <input type="text" class="ans-line" placeholder="答：">   
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我有多久没有真正安静聆听神？(多少天、月、年？)</p>
+            <input type="text" class="ans-line" placeholder="答：">   
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我是否越来越失去喜乐？</p>
+            <input type="text" class="ans-line" placeholder="答："> 
+
+            <span class="q">3. 上帝曾经托付我的起初呼召是什么? 今天是否偏离了单纯?</span>
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">今天是否偏离了单纯?</p>
+            <input type="text" class="ans-line" placeholder="答：">
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我现在的服侍，还是出于爱吗？</p>
+            <input type="text" class="ans-line" placeholder="答：">
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我希望别人记得我的是什么？</p>
+            <input type="text" class="ans-line" placeholder="答：">
+
+            <span class="q">4. 若上帝此刻温柔地问“孩子，你累了吗？”</span>
+            <p style="font-size: 0.85rem; color: #666; margin: 5px 0;">我最真实想回答祂什么？如果你的回答是“是的，我累了！”请尝试完成以下的句子</p>
+            <input type="text" class="ans-line" placeholder="我真正累的，不是工作，而是：">
+
+            <span class="q">当你安静来到上帝面前，你感受到祂会如何温柔回应你？请写下来。”</span>
             <input type="text" class="ans-line" placeholder="答：">
         </div>
 
-    <footer>
-        <p>吧生基督教华人卫理公会 组长退修营 © 2026</p>
-    </footer>
+        <footer>
+            <p>吧生基督教华人卫理公会 组长退修营 © 2026</p>
+        </footer>
         
     </div>
     
