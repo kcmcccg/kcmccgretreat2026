@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026组长退修营 - 主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --primary-purple: #4a2a6b;
@@ -50,6 +51,7 @@
             display: flex;
             align-items: center;
             transition: 0.3s;
+            cursor: pointer;
         }
         .nav-card:active { background: rgba(255,255,255,0.2); }
         .circle-icon {
@@ -76,6 +78,44 @@
             line-height: 1.5;
         }
 
+        /* 子页面包裹器动画与控制样式 */
+        .subpage-view {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+        .subpage-title-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        .back-to-main-btn {
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .back-to-main-btn i { margin-right: 5px; }
+        .subpage-title-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         footer {
             margin-top: auto;
             padding: 20px;
@@ -88,64 +128,149 @@
 <body>
     <header class="header-section">
         <div class="church-name">吧生基督教华人卫理公会</div>
-        <div class="main-title">2026组长退修营</div>
+        <div class="main-title">2026 组长退修营</div>
         <div class="slogan">同心同行，建造生命，完成使命，延续传承！</div>
     </header>
 
     <div class="nav-container">
-        <a href="handbook.html" class="nav-card">
-            <div class="circle-icon">手册</div>
-            <div class="nav-text">
-                <h3>营会 e-手册</h3>
-                <p>流程、守则及重要资讯</p>
-            </div>
-        </a>
+        
+        <div id="main-menu-view">
+            <a href="handbook.html" class="nav-card">
+                <div class="circle-icon">手册</div>
+                <div class="nav-text">
+                    <h3>营会 e-手册</h3>
+                    <p>流程、守则及重要资讯</p>
+                </div>
+            </a>
 
-	<a href="timetable.html" class="nav-card">
-            <div class="circle-icon">秩序</div>
-            <div class="nav-text">
-                <h3>营会秩序表</h3>
-                <p>三天营会完整日程时间线表</p>
-            </div>
-        </a>
+            <a href="timetable.html" class="nav-card">
+                <div class="circle-icon">秩序</div>
+                <div class="nav-text">
+                    <h3>营会秩序表</h3>
+                    <p>三天营会完整日程时间线表</p>
+                </div>
+            </a>
 
-        <a href="devotion1.html" class="nav-card">
-            <div class="circle-icon">灵修</div>
-            <div class="nav-text">
-                <h3>灵修 (一)</h3>
-                <p>“向下移动” - 分享的生命</p>
+            <div class="nav-card" onclick="showSubpage('theme-info-page')">
+                <div class="circle-icon">信息</div>
+                <div class="nav-text">
+                    <h3>主题信息</h3>
+                    <p>主题信息反思及组长讨论问题</p>
+                </div>
             </div>
-        </a>
 
-        <a href="devotion2.html" class="nav-card">
-            <div class="circle-icon">灵修</div>
-            <div class="nav-text">
-                <h3>灵修 (二)</h3>
-                <p>传承与差遣的“向下移动”</p>
+            <div class="nav-card" onclick="showSubpage('devotion-page')">
+                <div class="circle-icon">灵修</div>
+                <div class="nav-text">
+                    <h3>灵修材料</h3>
+                    <p>营会每日灵修与反思问题</p>
+                </div>
             </div>
-        </a>
 
-        <a href="theme_song.html" class="nav-card">
-            <div class="circle-icon">主题</div>
-            <div class="nav-text">
-                <h3>营会主题曲</h3>
-                <p>歌词与音频播放</p>
+            <a href="theme_song.html" class="nav-card">
+                <div class="circle-icon">主题</div>
+                <div class="nav-text">
+                    <h3>营会主题曲</h3>
+                    <p>歌词与音频播放</p>
+                </div>
+            </a>
+
+            <a href="https://forms.gle/hTr1vP4eMgbYoc9q7" target="_blank" class="nav-card">
+                <div class="circle-icon">反馈</div>
+                <div class="nav-text">
+                    <h3>营会反馈问卷</h3>
+                    <p>期待您的建议与分享</p>
+                </div>
+            </a>
+
+            <div class="info-section">
+                <p>📍 吉隆坡卫理大厦<br>📅 31/5 - 2/6/2026</p>
             </div>
-        </a>
-
-        <a href="https://forms.gle/hTr1vP4eMgbYoc9q7" target="_blank" class="nav-card">
-            <div class="circle-icon">反馈</div>
-            <div class="nav-text">
-                <h3>营会反馈问卷</h3>
-                <p>期待您的建议与分享</p>
-            </div>
-        </a>
-
-        <div class="info-section">
-            <p>📍 吉隆坡卫理大厦<br>📅 31/5 - 2/6/2026</p>
         </div>
+
+
+        <div id="theme-info-page" class="subpage-view">
+            <div class="subpage-title-box">
+                <button class="back-to-main-btn" onclick="showMainMenu()"><i class="fa-solid fa-arrow-left"></i>返回</button>
+                <h2 class="subpage-title-text">主题信息</h2>
+            </div>
+
+            <a href="theme_life.html" class="nav-card">
+                <div class="circle-icon" style="border-color: #3E8E53; color: #3E8E53;">生命</div>
+                <div class="nav-text">
+                    <h3>主题(一)：生命</h3>
+                    <p>在灵命上被更新与建立</p>
+                </div>
+            </a>
+
+            <a href="theme_mission.html" class="nav-card">
+                <div class="circle-icon" style="border-color: #1E6F9F; color: #1E6F9F;">使命</div>
+                <div class="nav-text">
+                    <h3>主题(二)：使命</h3>
+                    <p>同心同行完成大使命</p>
+                </div>
+            </a>
+
+            <a href="theme_legacy.html" class="nav-card">
+                <div class="circle-icon">传承</div>
+                <div class="nav-text">
+                    <h3>主题(三)：传承</h3>
+                    <p>兴起并培育下一代领袖</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="devotion-page" class="subpage-view">
+            <div class="subpage-title-box">
+                <button class="back-to-main-btn" onclick="showMainMenu()"><i class="fa-solid fa-arrow-left"></i>返回</button>
+                <h2 class="subpage-title-text">灵修材料</h2>
+            </div>
+
+            <a href="devotion1.html" class="nav-card">
+                <div class="circle-icon">灵修</div>
+                <div class="nav-text">
+                    <h3>灵修 (一)</h3>
+                    <p>“向下移动” - 分享的生命</p>
+                </div>
+            </a>
+
+            <a href="devotion2.html" class="nav-card">
+                <div class="circle-icon">灵修</div>
+                <div class="nav-text">
+                    <h3>灵修 (二)</h3>
+                    <p>传承与差遣的“向下移动”</p>
+                </div>
+            </a>
+        </div>
+
     </div>
 
     <footer>© 2026 KLANG CHINESE METHODIST CHURCH</footer>
+
+    <script>
+        function showSubpage(pageId) {
+            // 隐藏主菜单
+            document.getElementById('main-menu-view').style.display = 'none';
+            // 隐藏所有可能打开的子页面
+            document.querySelectorAll('.subpage-view').forEach(page => {
+                page.style.display = 'none';
+            });
+            // 显现指定目标子菜单
+            document.getElementById(pageId).style.display = 'block';
+            // 视图自动平滑回滚到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showMainMenu() {
+            // 隐藏所有子菜单
+            document.querySelectorAll('.subpage-view').forEach(page => {
+                page.style.display = 'none';
+            });
+            // 恢复显现主菜单布局
+            document.getElementById('main-menu-view').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
