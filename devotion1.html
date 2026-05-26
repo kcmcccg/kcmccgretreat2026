@@ -15,7 +15,23 @@
         .scripture { background: #fff9f0; padding: 20px; border-radius: 10px; margin: 20px 0; border: 1px solid #f0e4d0; font-style: italic; color: #5d4037; }
         h3 { color: var(--primary); border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 30px; }
         .quote-box { background: var(--primary); color: white; padding: 18px; border-radius: 12px; text-align: center; font-weight: bold; margin: 25px 0; box-shadow: 0 4px 10px rgba(74,42,107,0.2); }
-        
+
+        /* 【新增】灵修插图自适应手机艺术样式 */
+        .devotion-img-box {
+            width: 100%;
+            margin: 35px 0 15px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .devotion-img-box img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px; /* 优雅大圆角 */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* 细腻拟物阴影 */
+            border: 1px solid #eaddca;
+        }
+		
         /* 反思区域整体背景 */
         .reflection { background: #f4f1f8; padding: 20px; border-radius: 15px; margin-top: 40px; border: 1px solid #e2d9eb; }
         .q { font-weight: bold; margin-top: 15px; display: block; color: var(--primary); }
