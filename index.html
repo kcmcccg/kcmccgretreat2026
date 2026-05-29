@@ -67,6 +67,10 @@
             flex-shrink: 0; 
             font-size: 0.9rem;
         }
+        .nav-card:active .circle-icon {
+            background: var(--accent-gold);
+            color: var(--primary-purple);
+        }
         .nav-text h3 { margin: 0; font-size: 1.1rem; }
         .nav-text p { margin: 3px 0 0; font-size: 0.8rem; opacity: 0.8; }
         
@@ -135,11 +139,11 @@
     <div class="nav-container">
         
         <div id="main-menu-view">
-            <a href="handbook.html" class="nav-card">
+            <a href="2026%20CG%20Leader%20Camp.pdf" target="_blank" class="nav-card">
                 <div class="circle-icon">手册</div>
                 <div class="nav-text">
                     <h3>营会 e-手册</h3>
-                    <p>流程、守则及重要资讯</p>
+                    <p>点击直接在线查看全本营会手册</p>
                 </div>
             </a>
 
@@ -188,7 +192,6 @@
             </div>
         </div>
 
-
         <div id="theme-info-page" class="subpage-view">
             <div class="subpage-title-box">
                 <button class="back-to-main-btn" onclick="showMainMenu()"><i class="fa-solid fa-arrow-left"></i>返回</button>
@@ -220,7 +223,6 @@
             </a>
         </div>
 
-
         <div id="devotion-page" class="subpage-view">
             <div class="subpage-title-box">
                 <button class="back-to-main-btn" onclick="showMainMenu()"><i class="fa-solid fa-arrow-left"></i>返回</button>
@@ -250,24 +252,18 @@
 
     <script>
         function showSubpage(pageId) {
-            // 隐藏主菜单
             document.getElementById('main-menu-view').style.display = 'none';
-            // 隐藏所有可能打开的子页面
             document.querySelectorAll('.subpage-view').forEach(page => {
                 page.style.display = 'none';
             });
-            // 显现指定目标子菜单
             document.getElementById(pageId).style.display = 'block';
-            // 视图自动平滑回滚到顶部
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function showMainMenu() {
-            // 隐藏所有子菜单
             document.querySelectorAll('.subpage-view').forEach(page => {
                 page.style.display = 'none';
             });
-            // 恢复显现主菜单布局
             document.getElementById('main-menu-view').style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
